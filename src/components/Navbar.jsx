@@ -9,14 +9,14 @@ function Navbar() {
       <div className="container-fluid mx-3">
         <a className="navbar-brand d-flex align-items-center" href="/">
           <img src={logo} alt="Immerse Logo" style={{ height: '40px' }} />
-          <span className="fw-bolder m-2">Immerse</span>
+          <span className="immerse m-2">Immerse</span>
         </a>
 
         {/* Large Dropdown Menu */}
         <div className="dropdown mx-5 d-lg-inline d-none">
           <a
           href="courses"
-            className="text-decoration-none text-white fs-5 dropdown-toggle" 
+            className="text-decoration-none text-white dropdown-toggle" 
             type="button" 
             id="browseDropdown" 
             aria-expanded="false"
@@ -68,10 +68,10 @@ function Navbar() {
         <div className="collapse navbar-collapse order-lg-2" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item px-3">
-              <a className="nav-link fs-6" href="http://localhost:5174/sign-in">Sign In</a>
+              <a className="nav-link sign-in" href="http://localhost:5174/sign-in">Sign In</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fs-5" href="http://localhost:5174/sign-up">Sign Up</a>
+              <a className="nav-link sign-up" href="http://localhost:5174/sign-up">Sign Up</a>
             </li>
           </ul>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.png';
-
+import { Facebook, Instagram, Linkedin, Youtube, Pinterest, Tiktok } from 'react-bootstrap-icons'; // Import specific icons
 
 const Footer = () => {
   return (
@@ -42,9 +42,16 @@ const Footer = () => {
       <div className="footer-bottom container">
         <div className="footer-logo">
           <img src={logo} alt="Immerse Logo" />
-          <span>Immerse</span>
         </div>
         <p>© Immerse, Inc. 2024</p>
+        <div className="social-media">
+          <a href="#" aria-label="Facebook"><Facebook className="bi" /></a>
+          <a href="#" aria-label="Instagram"><Instagram className="bi" /></a>
+          <a href="#" aria-label="LinkedIn"><Linkedin className="bi" /></a>
+          <a href="#" aria-label="YouTube"><Youtube className="bi" /></a>
+          <a href="#" aria-label="Pinterest"><Pinterest className="bi" /></a>
+          <a href="#" aria-label="TikTok"><Tiktok className="bi" /></a>
+        </div>
       </div>
     </footer>
   );

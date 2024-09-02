@@ -1,11 +1,18 @@
+@import './abstracts/fonts.scss';
+
+@import './abstracts/base.scss';
+
+@import './abstracts/variables.scss';
 
 
 @import './components/navbar.scss';
 @import './pages/home.scss';
 @import './components/courseCard.scss';
 @import './components/footer.scss';
-@import './abstracts/variables.scss';
 
 @import './components/creativeLearning.scss';
 @import './components/courseCard2.scss';
 @import './components/courselist.scss';
+@import './components/carousel.scss';
+@import './components/FAQComponent.scss';
+@import './components/opinions.scss';

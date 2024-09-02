@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+
+.line-title { 
+  color: white;
+  position: relative;
+  width: 400px;
+  margin-bottom: 48px;
+  padding-bottom: 25px;
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin: auto;
+  text-transform: capitalize;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  &::before {
+    width: 100%;
+    background: #f2f2f2;
+  }
+
+  &::after {
+    width: 32px;
+    background: $primary;
+  }
+}
+
+.categories-section {
+   padding: 60px 50px;
+
+  .custom-carousel {
+    padding-top: 50px;
+    display: flex;
+    margin: 15px 0;
+    overflow-x: auto;
+
+    .item {
+      margin: 0 15px 60px;
+      width: 320px;
+      height: 400px;
+      display: flex;
+      align-items: flex-end;
+      background: #343434 no-repeat center center / cover;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+
+      &.active {
+        width: 500px;
+        box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+      }
+
+      .item-desc {
+        padding: 0 24px 12px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transform: translateY(calc(100% - 65px));
+        transition: all 0.4s ease-in-out;
+
+        h3 {
+          margin: 0 0 10px;
+          font-size: 25px;
+          line-height: 36px;
+          font-weight: 600;
+        }
+
+        p {
+          font-weight: 100;
+          opacity: 0;
+          transform: translateY(32px);
+          transition: all 0.4s ease-in-out 0.2s;
+        }
+      }
+
+      &.active .item-desc {
+        transform: none;
+
+        p {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  .line-title {
+    width: 250px;
+  }
+
+  .game-section {
+    padding: 30px 15px 20px;
+
+    .custom-carousel {
+      .item {
+        width: 200px;
+        height: 280px;
+
+        &.active {
+          width: 270px;
+          box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .item-desc {
+          padding: 0 14px 5px;
+          transform: translateY(calc(100% - 42px));
+        }
+      }
+    }
+  }
+}

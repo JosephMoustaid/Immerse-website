@@ -3,15 +3,28 @@
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 0;
   }
+  .immerse{
+    font-weight: 800;
+  }
   .navbar .nav-link {
     color: white;
-    font-weight: 300;
   }
   .navbar .navbar-brand img {
     max-height: 40px;
   }
   .navbar .nav-item .nav-link {
+    font-weight: 700;
     font-size: 16px;
+    padding: 8px 16px;
+    font-size: .8em;
+  }
+  .sign-in{
+    color: white;
+  }
+  .sign-up{
+    background-color: $primary;
+    color: #15182c !important;
+    border-radius: 5px;
   }
   .navbar .nav-item .nav-link:hover {
     color: #ddd;
@@ -33,10 +46,11 @@
 }
 
 .dropdown-header {
-  font-weight: 400;
+  font-weight: 600;
 }
 /* Show dropdown menu on hover */
 .dropdown:hover .dropdown-menu {
+  font-size: .8em;
   display: block;
   margin-top: 0;
 }
@@ -45,6 +59,13 @@
   display: none; /* Hide by default */
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
+  .dropdown-header{
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .dropdown-item{
+    font-weight: 600;
+  }
 }
 
 .dropdown:hover .dropdown-menu {

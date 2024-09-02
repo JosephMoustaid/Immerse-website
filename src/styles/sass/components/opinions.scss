@@ -1,0 +1,54 @@
+// Opinions.scss
+
+.opinions-container {
+    position: relative; /* Ensure container is positioned for stacking context */
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: auto;
+    background-image: url('../../assets/images/graphic-2.svg'); /* Corrected the syntax for background image */
+    background-size: cover; /* Adjusts the image to cover the container */
+    background-position: left center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .why {
+        color: rgb(209, 209, 209);
+        max-width: 600px;
+        font-size: 1.1em;
+        margin-top: 40px;
+        padding-bottom: 50px;
+        margin: auto;
+    }
+
+    .quote {
+        margin: auto;
+        max-width: 500px;
+        padding-bottom: 50px;
+
+        i {
+            color: $primary;
+        }
+
+        p {
+            font-size: 1.4em;
+            display: inline;
+        }
+
+        .quote-person {
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .quote-symbol {
+            display: inline;
+            font-size: 1.2em;
+            color: $primary;
+            margin: 0 5px;
+        }
+    }
+}
