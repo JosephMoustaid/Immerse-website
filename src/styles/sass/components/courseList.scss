@@ -31,7 +31,7 @@
         font-size: 0.7em;
   
         &.active {
-          background-color: $primary; // Example color for active category
+          background-color: $primary !important; // Example color for active category
           color: #000;
         }
   

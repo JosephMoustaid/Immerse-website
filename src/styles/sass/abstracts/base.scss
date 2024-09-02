@@ -1,13 +1,49 @@
 .bg-black {
     background: black;
+    color: white;
 }
 .bg-white {
     background: rgb(255, 255, 255);
+    color: black;
 }
+.text-dark{
+    color: black;
+}
+.underline{
+    text-decoration: underline;
+}
+.btn-primary{
+    background-color: $primary;
+    border: none;
+    &:hover{
+        background-color: $darker-primary;
+    }
+}
+.bg-primary{
+    background-color: $primary !important;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 600ms ease;
+  }
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
 body {
     font-family: 'SFProDisplay', sans-serif;
     font-weight: 100;
     h1,h2{
         font-weight: 600;
     }
+}
+.list-group-item.active {
+    background-color: $primary;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
 }

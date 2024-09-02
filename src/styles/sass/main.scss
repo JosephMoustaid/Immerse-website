@@ -1,13 +1,15 @@
 @import './abstracts/fonts.scss';
+@import './abstracts/variables.scss';
 
 @import './abstracts/base.scss';
 
-@import './abstracts/variables.scss';
 
 
 @import './components/navbar.scss';
 @import './pages/home.scss';
 @import './components/courseCard.scss';
+@import './components/courseCard2.scss';
+
 @import './components/footer.scss';
 
 @import './components/creativeLearning.scss';

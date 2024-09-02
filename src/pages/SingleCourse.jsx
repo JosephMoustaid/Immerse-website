@@ -2,8 +2,8 @@ import React from 'react';
 import categorie1 from '../assets/categorie1.jpg';
 import { FaUsers, FaStar  } from 'react-icons/fa';
 import { GrUpdate } from "react-icons/gr";
-import CourseCard from '../components/CourseCard';
-import person from '../assets/person1.jpg';
+import CourseCard2 from '../components/CourseCard2';
+import person from '../assets/person.png';
 
 const SingleCourse = () => {
   const categorie = "artificial intelligence";
@@ -32,68 +32,70 @@ const SingleCourse = () => {
 
   return (
     <div className="container-fluid p-0 m-0 mt-3 pt-2 ">
-      <div className="container-fluid bg-primary">
-      <div className="container">
-      <div className="row bg-primary mt-5 p-5">
-        <div className="col-4 ">
-          <img src={categorie1} alt="imagee" className="img-fluid" />
+      <div className="container-fluid " style={{backgroundColor:"#322936"}}>
+        <div className="container">
+          <div className="row p-5" style={{backgroundColor:"#322936"}}>
+            <div className="col-8 m-auto text-start text-white">
+              <h1 className="text-white  mb-3">Artificial Intelligence Course</h1>
+              <p className='mb-3'><FaUsers /> 15 students enrolled</p>
+              <div className="text-warning mb-3">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />          
+                <span className="text-white"> (12 Reviews)</span>
+              </div>
+              <p>Created By <a className=' text-info  mb-3'>Oussama Teacher</a></p>
+              <p><GrUpdate/> Last updated on 5/2024</p>
+            </div>
+            <div className="col-4 ">
+              <img src={categorie1} alt="imagee" className="img-fluid rounded shadow"  />
+            </div>
+          </div>
         </div>
-        <div className="col-8 m-auto text-start text-white">
-          <h1 className="text-white bg-primary mb-3">Artificial Intelligence Course</h1>
-          <p className='mb-3'><FaUsers /> 15 students enrolled</p>
-          <div className="text-warning mb-3">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />          
-            <span className="text-white"> (12 Reviews)</span>
-           </div>
-            <p>Created By <a className=' text-info  mb-3'>Oussama Teacher</a></p>
-            <p><GrUpdate/> Last updated on 5/2024</p>
-
-        </div>
-        </div>
-      </div>
       </div>
       <div className='container mt-5'>
       <div className="row">
         <div className="col-lg-7 ">
           <section className="mb-4">
-            <h4>About the course</h4>
+            <h4 className='fw-bold'>About the course</h4>
             <hr className="border-dark" />
             <p>
-              Unlock the full potential of web development with our comprehensive course bundle.
-              From foundational HTML and CSS to advanced JavaScript frameworks and responsive design,
-              this all-inclusive package is designed to equip you with the skills needed to build stunning,
-              professional websites. Perfect for beginners and seasoned developers alike, our expertly
-              crafted courses ensure you stay ahead in the ever-evolving world of web development.
-              Start your journey today!
+              <ul>
+                <li>Unlock the full potential of web development with our comprehensive course bundle.</li>
+                <li className='pt-2'>From foundational HTML and CSS to advanced JavaScript frameworks and responsive design, this all-inclusive package is designed to equip you with the skills needed to build stunning,professional websites. </li>
+                <li className='pt-2'>Perfect for beginners and seasoned developers alike, our expertly crafted courses ensure you stay ahead in the ever-evolving world of web development. Start your journey today!</li>
+              </ul>
             </p>
           </section>
 
           {/* Skills You'll Gain */}
           <section className="mb-4">
-            <h4>Skills you'll gain</h4>
             <hr className="border-dark" />
+            <h4 className='fw-bold'>Skills you'll gain</h4>
             <ul className="list-inline">
               <li className="list-inline-item badge bg-secondary text-white me-2">HTML</li>
               <li className="list-inline-item badge bg-secondary text-white me-2">CSS</li>
               <li className="list-inline-item badge bg-secondary text-white">JavaScript</li>
             </ul>
           </section>
-          {/* Related Courses */}
-      
+          {/* Enroll now */}
+          <section className="mb-4">
+          <hr className="border-dark" />
+            <h4 className='fw-bold'>Enrollement</h4>
+            <button className="btn  fs-5 w-100 bg-primary text-dark shadow" style={{ borderColor: '#FF00FF' }}>Enroll Now</button>
+          </section>
          
         </div>
 
         {/* Sidebar */}
-        <div className="col-lg-4 m-auto">
-          <div className="card bg-light border-dark p-4">
-            <h5 className="text-uppercase">Instructor</h5>
+        <div className="col-lg-4 m-auto" style={{maxWidth:"300px"}}>
+          <div className="card  p-4 shadow">
+            <h5 className="text-capitalize fw-bold">Instructor</h5>
             <div className="d-flex align-items-center mb-3">
-              <img src={person} className="rounded-circle" width="50" height="50" alt="Instructor" />
+              <img src={person} className="rounded-circle shadow" width="50" height="50" alt="Instructor" />
               <div className="ms-3">
-                <h6 className="fw-normal">Oussama Teacher</h6>
+                <h6 className="-normal">Oussama Teacher</h6>
                 <div className="text-warning">
                   <i className="bi bi-star-fill"></i>
                   <i className="bi bi-star-fill"></i>
@@ -103,24 +105,22 @@ const SingleCourse = () => {
                 </div>
               </div>
             </div>
-            <h6 className="text-uppercase mt-3">Skill-Level</h6>
+            <h6 className="text-capitalize mt-3 fw-bold">Skill-Level :</h6>
+            <p className='underline'>Beginner</p>
             <hr className="border-dark" />
-            <p>Beginner</p>
-            <h6 className="text-uppercase mt-3">Prerequisites</h6>
-            <hr className="border-dark" />
-            <p>None</p>
-            <button className="btn btn-primary fw-bold fs-5 w-100" style={{ backgroundColor: '#FF00FF', borderColor: '#FF00FF' }}>Enroll Now</button>
+            <h6 className="text-capitalize mt-3 fw-bold">Prerequisites :</h6>
+            <p className='underline'>None</p>
           </div>
         </div>
       </div>
       <div className="container m-auto mt-5">
-        <h4>Related Courses</h4>
+        <h4 className='fw-bold'>Related Courses</h4>
         <hr className="border-dark" />
         <div className="row ">
                 {limitedCourses.length > 0 ? (
                     limitedCourses.map((course, index) => (
                         <div key={index} className="col-md-4 mb-4">
-                            <CourseCard course={course} />
+                            <CourseCard2 course={course} />
                         </div>
                     ))
                 ) : (

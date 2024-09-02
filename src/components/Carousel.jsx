@@ -37,7 +37,7 @@ const Carousel = () => {
   return (
     <section className="categories-section">
       <h2 className="line-title">categories</h2>
-      <div className="custom-carousel">
+      <div className="custom-carousel reveal">
         {categories.map((categorie, index) => (
           <div
             key={index}

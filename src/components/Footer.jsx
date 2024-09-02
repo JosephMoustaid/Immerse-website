@@ -1,41 +1,30 @@
 import React from 'react';
 import logo from '../assets/logo.png';
 import { Facebook, Instagram, Linkedin, Youtube, Pinterest, Tiktok } from 'react-bootstrap-icons'; // Import specific icons
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="footer ">
       <div className="footer-sections container ">
-        <div className="footer-column ps-5">
+        <div className="footer-column ps-5"> 
           <h4>Immerse</h4>
           <ul>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
+          <li><Link to="/about" className="text-decoration-none ">About</Link></li>
+          <li><Link to="/contact" className="text-decoration-none ">Contact</Link></li>
           </ul>
         </div>
         <div className="footer-column">
           <h4>Community</h4>
           <ul>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h4>Community</h4>
-          <ul>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
+          <li><Link to="/privacy" className="text-decoration-none ">Privacy</Link></li>
+          <li><Link to="/terms" className="text-decoration-none ">Terms</Link></li>
           </ul>
         </div>
         <div className="footer-column">
           <h4>More</h4>
           <ul>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
+            <li><Link to=".#faq" className="text-decoration-none">FAQ</Link></li>
           </ul>
         </div>
       </div>

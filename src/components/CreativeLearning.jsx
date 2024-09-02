@@ -18,40 +18,40 @@ const CreativeLearning = () => {
   return (
     <div className="creative-learning-container">
       <div className="creative-learning-content">
-        <h2 className="creative-learning-title">Creative Learning Made Easy</h2>
-        <ul className="creative-learning-list">
-          <li>
+        <h2 className="creative-learning-title reveal">Creative Learning Made Easy</h2>
+        <ul className="creative-learning-list ">
+          <li className="reveal">
             <CheckedIcon />
             Thousands of creative classes. Beginner to pro.
           </li>
-          <li>
+          <li className="reveal">
             <CheckedIcon />
             Taught by creative pros and industry icons.
           </li>
-          <li>
+          <li className="reveal">
             <CheckedIcon />
             Learning Paths to help you achieve your goals.
           </li>
-          <li>
+          <li className="reveal">
             <CheckedIcon />
             Certificates to celebrate your accomplishments.
           </li>
         </ul>
       </div>
       <div className="creative-learning-stats">
-        <div className="stat-box">
+        <div className="stat-box reveal">
           <span className="stat-number">25K+</span>
           <span className="stat-label">CLASSES</span>
         </div>
-        <div className="stat-box">
+        <div className="stat-box reveal">
           <span className="stat-number">600K+</span>
           <span className="stat-label">MEMBERS</span>
         </div>
-        <div className="stat-box">
+        <div className="stat-box reveal">
           <span className="stat-number">8K+</span>
           <span className="stat-label">TEACHERS</span>
         </div>
-        <div className="stat-box">
+        <div className="stat-box reveal">
           <span className="stat-number">4.8</span>
           <span className="stat-label">APP STORE RATING</span>
         </div>

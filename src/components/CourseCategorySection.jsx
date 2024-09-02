@@ -7,11 +7,11 @@ const CourseCategorySection = ({ category, courses }) => {
 
   return (
     <div className="category-section mb-5">
-      <h2 className="category-title ">{category}</h2>
-      <div className="underline  my-3"></div>
+      <h2 className="category-title reveal">{category}</h2>
+      <div className="underline reveal my-3"></div>
       <div className="row g-3 ">
         {displayedCourses.map((course, index) => (
-          <div className="col-md-4 col-sm-6" key={index}>
+          <div className="col-md-4 col-sm-6 reveal" key={index}>
             <CourseCard course={course} />
           </div>
         ))}

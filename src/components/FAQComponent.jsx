@@ -8,7 +8,7 @@ const FAQComponent = () => {
   };
 
   return (
-    <div className="faq-container">
+    <div className="faq-container reveal">
       <h2>Questions fréquemment posées</h2>
       <div className="faq-item" onClick={() => toggleFAQ(0)}>
         <div className="faq-question"> <span>Qu'est-ce que Skillshare ?</span> <span className='arrow'>&#9662;</span> </div>

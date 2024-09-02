@@ -221,7 +221,7 @@ const categories = [
 
 
 const CourseList = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Music");
+  const [selectedCategory, setSelectedCategory] = useState("Featured");
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -233,8 +233,8 @@ const CourseList = () => {
 
   return (
     <div className="course-list-container">
-      <h2>Explore Inspiring Online Courses</h2>
-      <div className="categories">
+      <h2 className="reveal">Explore Inspiring Online Courses</h2>
+      <div className="categories reveal">
         {categories.map((category) => (
           <button
             key={category}
@@ -247,17 +247,20 @@ const CourseList = () => {
       </div>
       <div className="courses">
         {filteredCourses.map((course) => (
-          <CourseCard
-            key={course.id}
-            id={course.id}
-            name={course.name}
-            teacher={course.teacher}
-            teacherProfile={course.teacherProfile}
-            type={course.type}
-            previewImg={course.previewImg}
-            bookmark={course.bookmark}
-            rating={course.rating}
-          />
+          <div className="reveal">
+            <CourseCard
+              key={course.id}
+              id={course.id}
+              name={course.name}
+              teacher={course.teacher}
+              teacherProfile={course.teacherProfile}
+              type={course.type}
+              previewImg={course.previewImg}
+              bookmark={course.bookmark}
+              rating={course.rating}
+            />
+          </div>
+          
         ))}
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min'; // Import Bootstrap JS for dropdown functionality
 import logo from '../assets/logo.png';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -15,7 +16,7 @@ function Navbar() {
         {/* Large Dropdown Menu */}
         <div className="dropdown mx-5 d-lg-inline d-none">
           <a
-          href="courses"
+          href="courses/all"
             className="text-decoration-none text-white dropdown-toggle" 
             type="button" 
             id="browseDropdown" 
@@ -28,25 +29,25 @@ function Navbar() {
               {/* Column 1 */}
               <div className="col-4 p-3">
                 <h6 className="dropdown-header">Technology</h6>
-                <a className="dropdown-item" href="#">Web Development</a>
-                <a className="dropdown-item" href="#">Data Science</a>
-                <a className="dropdown-item" href="#">Artificial Intelligence</a>
-                <a className="dropdown-item" href="#">CyberSecurity</a>
+                <Link className="dropdown-item" to="/courses/web-development">Web Development</Link>
+                <Link className="dropdown-item" to="/courses/data-science">Data Science</Link>
+                <Link className="dropdown-item" to="/courses/artificial-intelligence">Artificial Intelligence</Link>
+                <Link className="dropdown-item" to="/courses/cybersecurity">CyberSecurity</Link>
               </div>
               {/* Column 2 */}
               <div className="col-4 p-3">
                 <h6 className="dropdown-header">Business</h6>
-                <a className="dropdown-item" href="#">Marketing</a>
-                <a className="dropdown-item" href="#">Finance</a>
-                <a className="dropdown-item" href="#">Project Management</a>
+                <Link className="dropdown-item" to="/courses/marketing">Marketing</Link>
+                <Link className="dropdown-item" to="/courses/finance">Finance</Link>
+                <Link className="dropdown-item" to="/courses/project-management">Project Management</Link>
               </div>
               {/* Column 3 */}
               <div className="col-4 p-3">
                 <h6 className="dropdown-header">Science</h6>
-                <a className="dropdown-item" href="#">Biology</a>
-                <a className="dropdown-item" href="#">Chemistry</a>
-                <a className="dropdown-item" href="#">Geology</a>
-                <a className="dropdown-item" href="#">Physics</a>
+                <Link className="dropdown-item" to="/courses/biology">Biology</Link>
+                <Link className="dropdown-item" to="/courses/chemistry">Chemistry</Link>
+                <Link className="dropdown-item" to="/courses/geology">Geology</Link>
+                <Link className="dropdown-item" to="/courses/physics">Physics</Link>
               </div>
             </div>
           </div>
