@@ -1,29 +1,38 @@
-import React from 'react';
-import { FaUsers } from "react-icons/fa";
-import { FaStar } from 'react-icons/fa6';
-import categorie1 from '../assets/categorie1.jpg';
-import person from '../assets/person1.jpg';
+import React from "react";
+import { FaBookmark, FaStar } from "react-icons/fa";
 
-const CourseCard = ({ course }) => {
+const CourseCard = ({ id, name, teacher, teacherProfile, type, previewImg, bookmark, rating }) => {
   return (
     <div className="course-card">
-      <img src={categorie1} alt={course.title} className="course-image" />
+      {/* Badge for course type */}
+      {type && <div className={`badge ${type.toLowerCase()}`}>{type}</div>}
+      
+      {/* Course preview image */}
+      <img src={previewImg} alt={name} className="course-image" />
+
       <div className="course-info">
-        <div className="course-rating mb-3">
+        {/* Bookmark icon */}
+        {bookmark && (
+          <div className="bookmark">
+            <FaBookmark />
+          </div>
+        )}
+
+        {/* Course rating */}
+        <div className="rating">
           {[...Array(5)].map((_, i) => (
-            <FaStar key={i} className="star" />
+            <FaStar key={i} className={i < rating ? "star filled" : "star"} />
           ))}
-          <span className="course-reviews">({course.reviews})</span>
         </div>
-        <h3 className="course-title mb-3">{course.title}</h3>
-        <p className="course-enrolled mb-3">
-          <FaUsers /> {course.enrolled} students enrolled
-        </p>
-        <div className="course-teacher mb-3">
-          <img src={person} alt={course.teacherName} className="teacher-image" />
-          <span>{course.teacherName}</span>
+
+        {/* Course title */}
+        <h3 className="title">{name}</h3>
+        
+        {/* Teacher profile and name */}
+        <div className="instructor">
+          <img src={teacherProfile} alt={teacher} className="teacher-image" />
+          <p>{teacher}</p>
         </div>
-        <a href="course" className="enroll-btn text-decoration-none fw-bolder ">Learn More</a>
       </div>
     </div>
   );

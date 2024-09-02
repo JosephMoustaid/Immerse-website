@@ -4,8 +4,8 @@ import { Facebook, Instagram, Linkedin, Youtube, Pinterest, Tiktok } from 'react
 
 const Footer = () => {
   return (
-    <footer className="footer p-5">
-      <div className="footer-sections container ps-5">
+    <footer className="footer ">
+      <div className="footer-sections container ">
         <div className="footer-column ps-5">
           <h4>Immerse</h4>
           <ul>

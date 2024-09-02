@@ -1,105 +1,186 @@
-.app {
-    padding: 20px;
-  }
-  
-  .category-section {
-    margin-bottom: 50px;
-  }
-  
-  .category-title {
-    font-size: 24px;
-    font-weight: 500;
-  }
-  
-  .underline {
-    width: 100px;
-    height: 5px;
-    background-color: purple;
-    margin-bottom: 20px;
-  }
-  
-  .course-list {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .course-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 350px;
-  }
-  
-  .course-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .course-info {
-    padding: 15px;
-  }
-  
-  .course-rating {
-    display: flex;
-    align-items: center;
-  }
-  
-  .star {
-    color: gold;
-  }
-  
-  .course-reviews {
-    margin-left: 5px;
-    font-size: 14px;
-    color: gray;
-  }
-  
-  .course-title {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  .course-enrolled {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: gray;
-  }
-  
-  .course-teacher {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-  }
-  
-  .teacher-image {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .enroll-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff00ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .show-all-btn {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #ccc;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.course-card {
+  width: 200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
 
-  .border-purple {
-    border: 2px solid #DC28E4;
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.7em;
+    font-weight: bold;
+    z-index: 10;
+
+    &.original {
+      background-color: #1e1e1e;
+    }
+  }
+
+  .course-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .course-info {
+    padding: 15px;
+    position: relative;
+
+    .bookmark {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #f39c12;
+      font-size: 1em;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .star {
+        color: #ccc;
+        font-size: .8em;
+        margin-right: 2px;
+      }
+
+      .filled {
+        color: #f1c40f;
+      }
+    }
+
+    .title {
+      font-size: .9em;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .instructor {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      .teacher-image {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      p {
+        font-size: 0.7em;
+        color: #333;
+      }
+    }
+  }
+}
+  .browsing-course-card{
+    width: 200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #fffefe;
+      color: #000000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.7em;
+      font-weight: bold;
+      z-index: 10;
+  
+      &.original {
+        background-color: #1e1e1e;
+      }
+    }
+  
+    .course-image {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+  
+    .course-info {
+      padding: 15px;
+      position: relative;
+  
+      .bookmark {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #f39c12;
+        font-size: 1em;
+      }
+  
+      .rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+  
+        .star {
+          color: #000000;
+          font-size: .8em;
+          margin-right: 2px;
+        }
+  
+        .filled {
+          color: #f1c40f;
+        }
+      }
+  
+      .title {
+        font-size: .9em;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+      }
+  
+      .instructor {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+  
+        .teacher-image {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+  
+        p {
+          font-size: 0.7em;
+          color: #333;
+        }
+      }
+    }
   }
   
+

@@ -42,12 +42,17 @@
     display: flex;
     margin: 15px 0;
     overflow-x: auto;
-
+    @media (max-width:768px) {
+      display: block;
+    }
     .item {
       margin: 0 15px 60px;
       width: 320px;
       height: 400px;
       display: flex;
+      @media (max-width:768px) {
+        width: 100%;
+      }
       align-items: flex-end;
       background: #343434 no-repeat center center / cover;
       border-radius: 16px;

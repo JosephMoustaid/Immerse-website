@@ -2,6 +2,10 @@
 .navbar {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 0;
+    input, input::after , .input:focus, .input:active, input:hover , input:checked{
+      background-color: transparent;
+      color: white;
+    }
   }
   .immerse{
     font-weight: 800;
@@ -74,3 +78,8 @@
   margin-top: 0;
 }
 
+
+.placeholder-white::placeholder {
+  color: white !important;
+  opacity: 0.8 !important;  
+}

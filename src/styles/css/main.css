@@ -78,6 +78,10 @@ body h1, body h2 {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 10px 0;
 }
+.navbar input, .navbar input::after, .navbar .input:focus, .navbar .input:active, .navbar input:hover, .navbar input:checked {
+  background-color: transparent;
+  color: white;
+}
 
 .immerse {
   font-weight: 800;
@@ -159,6 +163,11 @@ body h1, body h2 {
   display: block;
   opacity: 1;
   margin-top: 0;
+}
+
+.placeholder-white::placeholder {
+  color: white !important;
+  opacity: 0.8 !important;
 }
 
 /* Hero section styles */
@@ -265,11 +274,17 @@ body h1, body h2 {
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 768px) {
+  .groupes div {
+    flex-direction: column;
+  }
+}
 .groupes div img {
   max-width: 400px;
   max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
+  margin-top: 15px;
 }
 .groupes div .pour-groupes {
   flex-direction: column;
@@ -587,109 +602,164 @@ body h1, body h2 {
     transform: translateY(-20px); /* Move up 20px */
   }
 }
-.app {
-  padding: 20px;
-}
-
-.category-section {
-  margin-bottom: 50px;
-}
-
-.category-title {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.underline {
-  width: 100px;
-  height: 5px;
-  background-color: purple;
-  margin-bottom: 20px;
-}
-
-.course-list {
-  display: flex;
-  gap: 20px;
-}
-
 .course-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
   overflow: hidden;
-  width: 350px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.course-image {
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.course-card .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.7em;
+  font-weight: bold;
+  z-index: 10;
+}
+.course-card .badge.original {
+  background-color: #1e1e1e;
+}
+.course-card .course-image {
   width: 100%;
-  height: 150px;
+  height: 100px;
   object-fit: cover;
 }
-
-.course-info {
+.course-card .course-info {
   padding: 15px;
+  position: relative;
 }
-
-.course-rating {
+.course-card .course-info .bookmark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f39c12;
+  font-size: 1em;
+}
+.course-card .course-info .rating {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
-
-.star {
-  color: gold;
+.course-card .course-info .rating .star {
+  color: #ccc;
+  font-size: 0.8em;
+  margin-right: 2px;
 }
-
-.course-reviews {
-  margin-left: 5px;
-  font-size: 14px;
-  color: gray;
+.course-card .course-info .rating .filled {
+  color: #f1c40f;
 }
-
-.course-title {
-  font-size: 18px;
-  margin: 10px 0;
+.course-card .course-info .title {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
 }
-
-.course-enrolled {
+.course-card .course-info .instructor {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  color: gray;
+  margin-top: 10px;
 }
-
-.course-teacher {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.teacher-image {
+.course-card .course-info .instructor .teacher-image {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
 }
+.course-card .course-info .instructor p {
+  font-size: 0.7em;
+  color: #333;
+}
 
-.enroll-btn {
+.browsing-course-card {
+  width: 200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.browsing-course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.browsing-course-card .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #fffefe;
+  color: #000000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.7em;
+  font-weight: bold;
+  z-index: 10;
+}
+.browsing-course-card .badge.original {
+  background-color: #1e1e1e;
+}
+.browsing-course-card .course-image {
   width: 100%;
-  padding: 10px;
-  background-color: #ff00ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  height: 100px;
+  object-fit: cover;
 }
-
-.show-all-btn {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #ccc;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.browsing-course-card .course-info {
+  padding: 15px;
+  position: relative;
 }
-
-.border-purple {
-  border: 2px solid #DC28E4;
+.browsing-course-card .course-info .bookmark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f39c12;
+  font-size: 1em;
+}
+.browsing-course-card .course-info .rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.browsing-course-card .course-info .rating .star {
+  color: #000000;
+  font-size: 0.8em;
+  margin-right: 2px;
+}
+.browsing-course-card .course-info .rating .filled {
+  color: #f1c40f;
+}
+.browsing-course-card .course-info .title {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.browsing-course-card .course-info .instructor {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.browsing-course-card .course-info .instructor .teacher-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.browsing-course-card .course-info .instructor p {
+  font-size: 0.7em;
+  color: #333;
 }
 
 .footer {
@@ -843,62 +913,6 @@ body h1, body h2 {
   font-size: 0.9rem;
 }
 
-.course-card2 {
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  min-width: 150px;
-  max-width: 200px;
-  max-height: 160px;
-  margin: 0;
-}
-.course-card2 .badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.65em;
-  color: #fff;
-}
-.course-card2 .badge.original {
-  background-color: #ff5722;
-}
-.course-card2 .badge.staff-pick {
-  background-color: #4caf50;
-}
-.course-card2 .course-image {
-  width: 100%;
-  max-height: 50%;
-  display: block;
-}
-.course-card2 .course-info {
-  padding: 15px;
-}
-.course-card2 .course-info .students {
-  font-size: 0.5em;
-  color: #757575;
-  margin: 0 0 5px 0;
-}
-.course-card2 .course-info .title {
-  font-size: 0.9em;
-  font-weight: bold;
-  margin: 5px 0;
-  color: #333;
-}
-.course-card2 .course-info .instructor {
-  font-size: 0.6em;
-  color: #757575;
-  margin: 5px 0;
-}
-.course-card2 .course-info .duration {
-  font-size: 0.55em;
-  color: #757575;
-  margin: 5px 0;
-}
-
 .course-list-container {
   max-width: 800px !important;
   padding: 20px;
@@ -983,6 +997,11 @@ body h1, body h2 {
   margin: 15px 0;
   overflow-x: auto;
 }
+@media (max-width: 768px) {
+  .categories-section .custom-carousel {
+    display: block;
+  }
+}
 .categories-section .custom-carousel .item {
   margin: 0 15px 60px;
   width: 320px;
@@ -995,6 +1014,11 @@ body h1, body h2 {
   position: relative;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .categories-section .custom-carousel .item {
+    width: 100%;
+  }
 }
 .categories-section .custom-carousel .item.active {
   width: 500px;

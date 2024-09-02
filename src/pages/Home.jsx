@@ -25,7 +25,6 @@ function Home() {
                     allow="fullscreen"
                     title="3D Model"
                 ></iframe>
-                
             </div>
 
 

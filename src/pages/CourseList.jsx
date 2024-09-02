@@ -46,7 +46,7 @@ function CourseList(){
           
       ];
     return (
-        <div className="app  px-3 m-auto mt-5 pt-5 bg-black">
+        <div className="app  px-3 m-auto mt-5 pt-5 ">
           <CourseCategorySection category="Software" courses={courses} />
           <CourseCategorySection category="Artificial Intelligence" courses={courses} />
         </div>

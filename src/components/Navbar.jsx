@@ -54,7 +54,7 @@ function Navbar() {
 
         <form className="d-flex position-relative mx-5 order-lg-1 d-lg-inline d-none" role="search" style={{ width: '400px' }}>
           <input 
-            className="form-control pe-5" 
+            className="form-control pe-5 placeholder-white" 
             type="search" 
             placeholder="What do you wanna learn?" 
             aria-label="Search" 
