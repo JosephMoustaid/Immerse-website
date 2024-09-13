@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <p>© Immerse, Inc. 2024</p>
         <div className="social-media">
-          <a href="#" aria-label="Facebook"><Facebook className="bi" /></a>
+          <a href="#" aria-label="Facebook" ><Facebook className="bi" /></a>
           <a href="#" aria-label="Instagram"><Instagram className="bi" /></a>
           <a href="#" aria-label="LinkedIn"><Linkedin className="bi" /></a>
           <a href="#" aria-label="YouTube"><Youtube className="bi" /></a>

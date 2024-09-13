@@ -642,7 +642,11 @@ body h1, body h2 {
   height: 100%;
   border: none;
   z-index: 1;
-  animation: bounce 3s ease-in-out infinite; /* Apply the bounce animation */
+  animation: bounce 3s ease-in-out infinite; /* the bouncing animation */
+}
+
+.hover-up-down {
+  animation: bounce 3s ease-in-out infinite;
 }
 
 /* Define the keyframes for bounce animation */
@@ -651,7 +655,7 @@ body h1, body h2 {
     transform: translateY(0); /* Starting and ending at the original position */
   }
   50% {
-    transform: translateY(-20px); /* Move up 20px */
+    transform: translateY(-10px); /* Move up 20px */
   }
 }
 .about img {

@@ -9,35 +9,35 @@ const FAQComponent = () => {
 
   return (
     <div className="faq-container reveal">
-      <h2>Questions fréquemment posées</h2>
+      <h2>Frequently Asked Questions</h2>
       <div className="faq-item" onClick={() => toggleFAQ(0)}>
-        <div className="faq-question"> <span>Qu'est-ce que Skillshare ?</span> <span className='arrow'>&#9662;</span> </div>
+        <div className="faq-question"> <span>What is Immerse?</span> <span className='arrow'>&#9662;</span> </div>
         <div className={`faq-answer ${activeIndex === 0 ? 'active' : ''}`}>
-          Skillshare est une communauté d'apprentissage en ligne proposant des milliers de cours...
+          Immerse is an innovative interactive learning platform that allows users to explore a wide variety of subjects through immersive 3D environments.
         </div>
       </div>
       <div className="faq-item" onClick={() => toggleFAQ(1)}>
-        <div className="faq-question"><span>Qu'est-ce qui est inclus dans mon abonnement Skillshare ?</span> <span className='arrow'>&#9662;</span></div>
+        <div className="faq-question"><span>What courses are available on Immerse?</span> <span className='arrow'>&#9662;</span></div>
         <div className={`faq-answer ${activeIndex === 1 ? 'active' : ''}`}>
-          Votre abonnement Skillshare inclut un accès illimité à tous les cours...
+          Immerse offers courses in subjects like Mathematics, Biological Science, Rocket Science, Architecture, Electronics, Physics, and more.
         </div>
       </div>
       <div className="faq-item" onClick={() => toggleFAQ(2)}>
-        <div className="faq-question"><span>Que puis-je apprendre sur Skillshare ?</span><span className='arrow'>&#9662;</span>  </div>
+        <div className="faq-question"><span>How does the Immerse subscription work?</span><span className='arrow'>&#9662;</span>  </div>
         <div className={`faq-answer ${activeIndex === 2 ? 'active' : ''}`}>
-          Skillshare propose des cours sur une variété de sujets...
+          A subscription to Immerse gives you unlimited access to a library of immersive 3D courses, allowing you to learn at your own pace while exploring interactive environments.
         </div>
       </div>
       <div className="faq-item" onClick={() => toggleFAQ(3)}>
-        <div className="faq-question"><span>Que se passe-t-il une fois mon essai terminé ?</span><span className='arrow'>&#9662;</span> </div>
+        <div className="faq-question"><span>What technologies are used in Immerse?</span><span className='arrow'>&#9662;</span> </div>
         <div className={`faq-answer ${activeIndex === 3 ? 'active' : ''}`}>
-          Une fois votre essai terminé, vous devrez choisir un abonnement payant...
+          Immerse utilizes advanced technologies such as Virtual Reality (VR), Augmented Reality (AR), and interactive 3D graphics to provide an engaging learning experience.
         </div>
       </div>
       <div className="faq-item" onClick={() => toggleFAQ(4)}>
-        <div className="faq-question"><span>Puis-je enseigner sur Skillshare ?</span> <span className='arrow'>&#9662;</span> </div>
+        <div className="faq-question"><span>Can I create my own courses on Immerse?</span> <span className='arrow'>&#9662;</span> </div>
         <div className={`faq-answer ${activeIndex === 4 ? 'active' : ''}`}>
-          Oui, Skillshare vous permet de partager vos compétences en tant qu'enseignant...
+          Yes, Immerse allows teachers and experts to create their own interactive courses using 3D creation tools to deliver a more engaging learning experience.
         </div>
       </div>
     </div>

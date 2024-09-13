@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-//import CourseCard2 from "../components/CourseCard2.jsx";
+// import CourseCard2 from "../components/CourseCard2.jsx";
 import CourseCard from "../components/CourseCard.jsx"
 
 const coursesData = [
   {
     id: 1,
-    name: "Piano Basics: Learn Notes, Scales & Chords",
-    teacher: "Elijah Fox-Pack",
+    name: "Calculus: Differentiation & Integration Basics",
+    teacher: "John Doe",
     teacherProfile: "https://example.com/teacher1-profile.jpg",
-    type: "Music", // Category
+    type: "Maths",
     previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
     bookmark: false,
     rating: {
-      percentage: 4.5, // Rating out of 5
-      number: 200, // Number of ratings
+      percentage: 4.5,
+      number: 200,
     },
   },
   {
     id: 2,
-    name: "Learn Guitar: The Complete Beginners Guide",
-    teacher: "Marc Barnacle",
+    name: "Introduction to Bioinformatics",
+    teacher: "Jane Smith",
     teacherProfile: "https://example.com/teacher2-profile.jpg",
-    type: "Music",
+    type: "Bio Science",
     previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
     bookmark: true,
     rating: {
@@ -31,10 +31,10 @@ const coursesData = [
   },
   {
     id: 3,
-    name: "Mastering Watercolor: Techniques & Tips",
-    teacher: "Anna Heaton",
+    name: "Rocket Science 101: Basics of Orbital Mechanics",
+    teacher: "Dr. Alan Rocket",
     teacherProfile: "https://example.com/teacher3-profile.jpg",
-    type: "Drawing & Painting",
+    type: "Rocket Science",
     previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
     bookmark: false,
     rating: {
@@ -44,10 +44,10 @@ const coursesData = [
   },
   {
     id: 4,
-    name: "Digital Marketing Fundamentals: SEO & Content Strategy",
-    teacher: "Paul Green",
+    name: "Architectural Science: Sustainable Building Design",
+    teacher: "Laura Miller",
     teacherProfile: "https://example.com/teacher4-profile.jpg",
-    type: "Marketing",
+    type: "Architectural Science",
     previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
     bookmark: true,
     rating: {
@@ -57,10 +57,10 @@ const coursesData = [
   },
   {
     id: 5,
-    name: "Animation for Beginners: Bringing Drawings to Life",
-    teacher: "Jasmine Lang",
+    name: "Introduction to Circuit Design",
+    teacher: "Richard Electra",
     teacherProfile: "https://example.com/teacher5-profile.jpg",
-    type: "Animation",
+    type: "Electronics",
     previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
     bookmark: false,
     rating: {
@@ -70,10 +70,10 @@ const coursesData = [
   },
   {
     id: 6,
-    name: "Social Media Mastery: Building a Brand",
-    teacher: "Renee Thompson",
+    name: "Fundamentals of Computer Architecture",
+    teacher: "Marcy Watson",
     teacherProfile: "https://example.com/teacher6-profile.jpg",
-    type: "Social Media",
+    type: "Computer Architecture",
     previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
     bookmark: true,
     rating: {
@@ -83,10 +83,10 @@ const coursesData = [
   },
   {
     id: 7,
-    name: "UI/UX Design Essentials: From Wireframe to Prototype",
-    teacher: "Nick Patterson",
+    name: "Physics: Mechanics & Motion",
+    teacher: "Dr. Maxwell Field",
     teacherProfile: "https://example.com/teacher7-profile.jpg",
-    type: "UI/UX design",
+    type: "Physics",
     previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
     bookmark: false,
     rating: {
@@ -96,10 +96,10 @@ const coursesData = [
   },
   {
     id: 8,
-    name: "Creative Writing: Finding Your Voice",
-    teacher: "Molly Stevens",
+    name: "Hardware Engineering: Building Computer Systems",
+    teacher: "Dr. Angela Hardware",
     teacherProfile: "https://example.com/teacher8-profile.jpg",
-    type: "Creative Writing",
+    type: "Hardware Science",
     previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
     bookmark: true,
     rating: {
@@ -109,10 +109,10 @@ const coursesData = [
   },
   {
     id: 9,
-    name: "Digital Illustration: Character Design",
-    teacher: "David Clarkson",
+    name: "Mechanical Science: Thermodynamics Basics",
+    teacher: "Steve Gears",
     teacherProfile: "https://example.com/teacher9-profile.jpg",
-    type: "Digital Illustration",
+    type: "Mechanical Science",
     previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
     bookmark: false,
     rating: {
@@ -120,105 +120,20 @@ const coursesData = [
       number: 300,
     },
   },
-  {
-    id: 10,
-    name: "Film & Video Production: From Concept to Final Cut",
-    teacher: "Lisa Morton",
-    teacherProfile: "https://example.com/teacher10-profile.jpg",
-    type: "Film & Video",
-    previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
-    bookmark: true,
-    rating: {
-      percentage: 4.6,
-      number: 150,
-    },
-  },
-  {
-    id: 11,
-    name: "Crafting Basics: Upcycling and DIY Projects",
-    teacher: "Susan Clarke",
-    teacherProfile: "https://example.com/teacher11-profile.jpg",
-    type: "Crafts",
-    previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
-    bookmark: false,
-    rating: {
-      percentage: 4.4,
-      number: 130,
-    },
-  },
-  {
-    id: 12,
-    name: "Freelance & Entrepreneurship: Building Your Brand",
-    teacher: "Anthony Moore",
-    teacherProfile: "https://example.com/teacher12-profile.jpg",
-    type: "Freelance & Entrepreneurship",
-    previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
-    bookmark: true,
-    rating: {
-      percentage: 4.9,
-      number: 220,
-    },
-  },
-  {
-    id: 13,
-    name: "Graphic Design: Basics to Advanced Techniques",
-    teacher: "Catherine Blake",
-    teacherProfile: "https://example.com/teacher13-profile.jpg",
-    type: "Graphic Design",
-    previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
-    bookmark: false,
-    rating: {
-      percentage: 4.7,
-      number: 310,
-    },
-  },
-  {
-    id: 14,
-    name: "Photography for Beginners: Understanding Your Camera",
-    teacher: "George Hamilton",
-    teacherProfile: "https://example.com/teacher14-profile.jpg",
-    type: "Photography",
-    previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
-    bookmark: true,
-    rating: {
-      percentage: 4.5,
-      number: 275,
-    },
-  },
-  {
-    id: 15,
-    name: "Time Management: Boost Your Productivity",
-    teacher: "Emma Stone",
-    teacherProfile: "https://example.com/teacher15-profile.jpg",
-    type: "Productivity",
-    previewImg: "https://www.petbehaviourcompany.co.uk/images/default-course-thumbnail.png",
-    bookmark: false,
-    rating: {
-      percentage: 4.2,
-      number: 145,
-    },
-  },
 ];
 
 const categories = [
   "Featured",
-  "Music",
-  "Drawing & Painting",
-  "Marketing",
-  "Animation",
-  "Social Media",
-  "UI/UX design",
-  "Creative Writing",
-  "Digital Illustration",
-  "Film & Video",
-  "Crafts",
-  "Freelance & Entrepreneurship",
-  "Graphic Design",
-  "Photography",
-  "Productivity",
+  "Maths",
+  "Bio Science",
+  "Rocket Science",
+  "Architectural Science",
+  "Electronics",
+  "Computer Architecture",
+  "Physics",
+  "Hardware Science",
+  "Mechanical Science",
 ];
-
-
 
 const CourseList = () => {
   const [selectedCategory, setSelectedCategory] = useState("Featured");
@@ -247,9 +162,8 @@ const CourseList = () => {
       </div>
       <div className="courses">
         {filteredCourses.map((course) => (
-          <div className="reveal">
+          <div className="reveal" key={course.id}>
             <CourseCard
-              key={course.id}
               id={course.id}
               name={course.name}
               teacher={course.teacher}
@@ -260,7 +174,6 @@ const CourseList = () => {
               rating={course.rating}
             />
           </div>
-          
         ))}
       </div>
     </div>
@@ -268,5 +181,3 @@ const CourseList = () => {
 };
 
 export default CourseList;
-
-
